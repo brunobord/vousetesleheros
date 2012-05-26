@@ -28,6 +28,7 @@ them in a set of hyperlinked webpages.
 This is the documentation of this tool... “Vous êtes le héros”.
 
 .. toctree::
+    :maxdepth: 2
 
     basic_usage
     yaml_specs
@@ -37,5 +38,6 @@ et donc, en Français
 ====================
 
 .. toctree::
+    :maxdepth: 1
 
     fr/index.rst
