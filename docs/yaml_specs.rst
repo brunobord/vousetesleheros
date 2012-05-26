@@ -50,6 +50,12 @@ Available keys
 * ``choices``: a list of options the players should pick... It's a bit more
   complex, please read further if you need some help.
 
+.. note::
+
+    The "intro" text will be parsed using the markdown format and generated. This
+    means for example that \*\*my text\*\* will be displayed in bold, like this:
+    **my text**.
+
 Choices
 -------
 
