@@ -73,3 +73,20 @@ indenté. Et chaque liste a de nouveau deux clés
 
     Le contenu du "next" est le nom simple de la page, sans l'extension ".html"
     ou ".yaml".
+
+Templates alternatifs
+---------------------
+
+Par défaut, le générateur utilise le template (gabarit) :file:`step.html`. Si
+vous avez besoin de spécifier un template particulier pour une page spéciale,
+vous aurez juste à :
+
+* ajouter un nouveau gabarit dans le dossier :file:`template`, disons le
+  fichier :file:`special.html`.
+* dans votre étape :file:`step.yaml` assignez une valeur pour la clé
+  ``template``, comme suit :
+
+.. code-block:: yaml
+
+    title: Ma page spéciale !
+    template: special.html

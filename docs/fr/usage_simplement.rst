@@ -21,7 +21,7 @@ Créer ses étapes
 ================
 
 Dans le dossier :file:`steps`, vous pouvez créer vos fichiers YAML en utilisant les
-:doc:`yaml_specs` propres au projet.
+:doc:`specs_yaml` propres au projet.
 
 À partir de là, votre imagination est la limite. Il est recommandé de démarrer
 à partir d'un :file:`index.yaml`, mais rien d'obligatoire.

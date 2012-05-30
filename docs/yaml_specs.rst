@@ -73,3 +73,17 @@ character. And each list item is built with two keys:
 
     Please note that the "next" content is the name of the page, without the
     ".html" or  ".yaml" file extension.
+
+Alternate templating
+--------------------
+
+By default, the template used by the generator is :file:`step.html`. If you need
+a specific template for one or more pages, you'll just have to:
+
+* add your new template in the :file:`template` directory, let's say it's called :file:`special.html`.
+* in your :file:`step.yaml` file, set a value for the key ``template``, like this:
+
+.. code-block:: yaml
+
+    title: Look, my special page!
+    template: special.html
