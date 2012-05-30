@@ -10,3 +10,10 @@ If you want to see it in action: go to http://vousetesleheros.alwaysdata.net/ -
 by the way, it's in french.
 
 This bit of software is Public Domain.
+
+---
+
+Webfont used:
+
+* Lancelot, by Marion Kadi
+* MedievalSharp, by Wojciech Kalinowski
