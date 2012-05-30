@@ -49,6 +49,8 @@ Clés disponibles
   pour les aider à faire un choix.
 * ``choices``: une liste d'options disponibles pour chaque joueur. C'est un peu
   plus complexe, donc, voir ci-dessous comment les alimenter.
+* ``image``: chemin vers une image qui s'affichera sur la gauche, à côté du texte
+  d'introduction. Notez que le chemin doit être relatif au dossier :file:`assets`.
 
 .. note::
 
