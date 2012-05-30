@@ -49,6 +49,9 @@ Available keys
   they could make their choice.
 * ``choices``: a list of options the players should pick... It's a bit more
   complex, please read further if you need some help.
+* ``image``: a path to the image that will be displayed on the left side of your
+  intro text. Please note that the path should be relative to the :file:`assets`
+  directory
 
 .. note::
 
