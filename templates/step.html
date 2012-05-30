@@ -26,11 +26,14 @@
     </div>
 
     <div class="row">
-        <div class="span7 offset3">
+        {% if image %}
+        <div class="span3">
+            <img src="assets/{{ image }}" />
+        </div>
+        {% endif %}
+        <div class="span7 {% if not image %}offset3{% endif %}">
             {% if intro %}
-            <div>
                 {{ intro|safe }}
-            </div>
             {% endif %}
             {% if choices %}
                 <ul>
