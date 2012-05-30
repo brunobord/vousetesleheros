@@ -2,6 +2,7 @@
 #-*- coding: utf8 -*-
 import os
 from codecs import open
+import shutil
 from jinja2 import Environment, FileSystemLoader
 import yaml
 import markdown
@@ -10,8 +11,10 @@ ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 STEP_DIR = os.path.join(ROOT_DIR, 'steps')
 BUILD_DIR = os.path.join(ROOT_DIR, 'website')
+ASSET_SOURCE_DIR = os.path.join(ROOT_DIR, 'assets')
+ASSET_DEST_DIR = os.path.join(BUILD_DIR, 'assets')
 
-for path in (STEP_DIR, BUILD_DIR):
+for path in (STEP_DIR, BUILD_DIR, ASSET_DEST_DIR):
     if not os.path.isdir(path):
         os.mkdir(path)
 
@@ -41,3 +44,7 @@ for filename in os.listdir(STEP_DIR):
         # build html file
         with open(build_file, 'w', encoding='utf8') as fd:
             fd.write(current_template.render(**data))
+
+# To be done only if everything's all right
+shutil.rmtree(ASSET_DEST_DIR)
+shutil.copytree(ASSET_SOURCE_DIR, ASSET_DEST_DIR)

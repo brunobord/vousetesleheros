@@ -3,12 +3,14 @@
 <head>
     <title>{{ title }}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='http://fonts.googleapis.com/css?family=Lancelot|MedievalSharp' rel='stylesheet' type='text/css'>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
     <style type="text/css">
-    .main {
-        width: 960px;
-        margin: auto;
+    body {
         font-family: 'Lancelot', cursive;
+        font-size: 1.2em !important;
     }
     h1, h2, h3, h4, h5, h6 {
         font-family: 'MedievalSharp', cursive;
@@ -17,7 +19,7 @@
 </head>
 <body>
 
-<div class="main">
+<div class="container">
 <h1>{{ title }}</h1>
 <h2>{{ subtitle }}</h2>
 {% if intro %}
