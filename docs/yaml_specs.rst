@@ -53,14 +53,15 @@ Available keys
   intro text. Please note that the path should be relative to the :file:`assets`
   directory
 
-.. note::
+``intro``
+---------
 
-    The "intro" text will be parsed using the markdown format and generated. This
-    means for example that \*\*my text\*\* will be displayed in bold, like this:
-    **my text**.
+The "intro" text will be parsed using the markdown format and generated. This
+means for example that \*\*my text\*\* will be displayed in bold, like this:
+**my text**.
 
-Choices
--------
+``choices``
+-----------
 
 Each choice is a list item. Each list item is preceeded by a (indented) "-"
 character. And each list item is built with two keys:
@@ -68,11 +69,15 @@ character. And each list item is built with two keys:
 * ``text``: the text of the link
 * ``next``: the target of the link. that is to say, the name of the next web page
   the players would reach if they make this choice.
+* ``notes`` : adding notes. These notes will be displayed as a pop-in, When
+  you'll click on the "OK" button, the players will be redirected to the ``next``
+  page.
 
 .. note::
 
     Please note that the "next" content is the name of the page, without the
     ".html" or  ".yaml" file extension.
+
 
 Alternate templating
 --------------------

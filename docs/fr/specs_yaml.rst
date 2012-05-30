@@ -52,15 +52,15 @@ Clés disponibles
 * ``image``: chemin vers une image qui s'affichera sur la gauche, à côté du texte
   d'introduction. Notez que le chemin doit être relatif au dossier :file:`assets`.
 
-.. note::
+``intro``
+---------
 
     Le texte d'intro sera analysé en markdown et générera du HTML. Ça signifie
     par exemple que \*\*mon texte\*\* s'affichera en gras, comme ceci :
     **mon texte**.
 
-
-Choices
--------
+``choices``
+-----------
 
 Chaque choix est un élément de liste. Chaque liste est est préfixée par un "-"
 indenté. Et chaque liste a de nouveau deux clés
@@ -68,6 +68,9 @@ indenté. Et chaque liste a de nouveau deux clés
 * ``text``: le texte du lien
 * ``next``: la cible du lien. c'est à dire, la page web vers laquelle les
   joueurs iront s'ils choisissent cette option.
+* ``notes`` : vous pouvez ajouter des notes, qui seront affichées dans un pop-in.
+  Quand vous aurez cliqué sur le bouton "OK", les joueurs seront redirigés vers
+  la page pointée par ``next``.
 
 .. note::
 
