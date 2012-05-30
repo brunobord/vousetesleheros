@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='http://fonts.googleapis.com/css?family=Lancelot|MedievalSharp' rel='stylesheet' type='text/css'>
     <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
     <style type="text/css">
-    body {
+    body, p {
         font-family: 'Lancelot', cursive;
-        font-size: 1.2em !important;
+        font-size: 1.1em !important;
     }
     h1, h2, h3, h4, h5, h6 {
         font-family: 'MedievalSharp', cursive;
@@ -38,7 +39,7 @@
             {% if choices %}
                 <ul>
                 {% for choice in choices %}
-                    <li><a href="{{ choice.next }}.html">{{ choice.text }}</a></li>
+                    <li>{% if choice.notes %}<a href="#note{{ loop.index }}" data-toggle="modal">{{ choice.text }}</a>{% else %}<a href="{{ choice.next }}.html">{{ choice.text }}</a>{% endif %}</li>
                 {% endfor %}
                 </ul>
             {% endif %}
@@ -46,6 +47,24 @@
     </div>
 
 </div>
+
+{% for choice in choices %}
+    {% if choice.notes %}
+    <div class="modal hide fade" id="note{{ loop.index }}" style="display: none;">
+        <div class="modal-header">
+            <button class="close" data-dismiss="modal">×</button>
+            <h3>{{ choice.text }}</h3>
+        </div>
+        <div class="modal-body">
+            <p>{{ choice.notes }}</p>
+        </div>
+        <div class="modal-footer">
+            <a href="{{ choice.next }}.html" class="btn btn-primary">Ok</a>
+        </div>
+    </div>
+    {% endif %}
+{% endfor %}
+
 
 </body>
 </html>

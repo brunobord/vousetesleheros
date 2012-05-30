@@ -22,6 +22,8 @@ choices:
     -
         text: Now I wanna go to this step
         next: next_step
+        notes: this is my first note
     -
         text: I'd rather go to this one
         next: other_step
+        notes: this is the other note
