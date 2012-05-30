@@ -20,20 +20,29 @@
 <body>
 
 <div class="container">
-<h1>{{ title }}</h1>
-<h2>{{ subtitle }}</h2>
-{% if intro %}
-<div>
-    {{ intro|safe }}
+    <div class="page-header">
+        <h1>{{ title }}</h1>
+        <h2>{{ subtitle }}</h2>
+    </div>
+
+    <div class="row">
+        <div class="span7 offset3">
+            {% if intro %}
+            <div>
+                {{ intro|safe }}
+            </div>
+            {% endif %}
+            {% if choices %}
+                <ul>
+                {% for choice in choices %}
+                    <li><a href="{{ choice.next }}.html">{{ choice.text }}</a></li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+
 </div>
-{% endif %}
-{% if choices %}
-    <ul>
-    {% for choice in choices %}
-        <li><a href="{{ choice.next }}.html">{{ choice.text }}</a></li>
-    {% endfor %}
-    </ul>
-{% endif %}
-</div>
+
 </body>
 </html>
