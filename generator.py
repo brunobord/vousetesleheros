@@ -9,7 +9,7 @@ import markdown
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 STEP_DIR = os.path.join(ROOT_DIR, 'steps')
-BUILD_DIR = os.path.join(ROOT_DIR, 'build')
+BUILD_DIR = os.path.join(ROOT_DIR, 'website')
 
 for path in (STEP_DIR, BUILD_DIR):
     if not os.path.isdir(path):
