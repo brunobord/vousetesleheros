@@ -27,9 +27,18 @@ class GenerateTestCase(unittest.TestCase):
         self.assertTrue('I am <strong>so</strong> happy to see you there' in content)
         self.assertTrue('Now I wanna go to this step / next_step' in content)
         self.assertTrue("I'd rather go to this one / other_step" in content)
+        # test on notes
+        self.assertTrue("Choice with notes" in content)
+        self.assertTrue("This is notes" in content)
 
     def test_assetdir(self):
         asset_dir = os.path.join(self.WEBSITE_DIR, 'assets')
         style_path = os.path.join(asset_dir, 'style.css')
         self.assertTrue(os.path.exists(asset_dir))
         self.assertTrue(os.path.exists(style_path))
+
+    def test_other_template(self):
+        other_html = os.path.join(self.WEBSITE_DIR, 'other.html')
+        self.assertTrue(os.path.exists(other_html))
+        content = open(other_html).read()
+        self.assertTrue('This is the other template' in content)

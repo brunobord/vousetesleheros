@@ -8,3 +8,7 @@ choices:
     -
         text: I'd rather go to this one
         next: other_step
+    -
+        text: Choice with notes
+        next: other_step
+        notes: This is notes

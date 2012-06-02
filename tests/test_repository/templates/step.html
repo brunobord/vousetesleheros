@@ -2,5 +2,5 @@
 <h2>{{ subtitle }}</h2>
 <p>{{ intro|safe }}</p>
 {% for choice in choices %}
-    {{ choice.text }} / {{ choice.next }}
+    {{ choice.text }} / {{ choice.next }} / {{ choice.notes }}
 {% endfor %}
