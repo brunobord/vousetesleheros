@@ -4,12 +4,17 @@ import os
 import argparse
 from codecs import open
 import shutil
+import logging
+logging.basicConfig(level=logging.INFO)
+
+
 from jinja2 import Environment, FileSystemLoader
 import yaml
 import markdown
 
 parser = argparse.ArgumentParser(u"Vous êtes le héros")
 parser.add_argument('--root-dir', '-d', default=os.path.dirname(os.path.abspath(__file__)))
+parser.add_argument('--quiet', '-q', default=False, action='store_true')
 args = parser.parse_args()
 
 ROOT_DIR = args.root_dir
@@ -28,7 +33,8 @@ env = Environment(loader=FileSystemLoader(TEMPLATE_DIR))
 
 # Looping on every yaml file in the "steps" directory
 for filename in os.listdir(STEP_DIR):
-    print "processing %s" % filename
+    if not args.quiet:
+        logging.info("processing %s" % filename)
     root, _ = os.path.splitext(filename)
     fullpath = os.path.join(STEP_DIR, filename)
     build_file = os.path.join(BUILD_DIR, "%s.html" % root)
