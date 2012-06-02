@@ -1,14 +1,18 @@
 #!/usr/bin/env python
-#-*- coding: utf8 -*-
+#-*- coding: utf-8 -*-
 import os
+import argparse
 from codecs import open
 import shutil
 from jinja2 import Environment, FileSystemLoader
 import yaml
 import markdown
 
-ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+parser = argparse.ArgumentParser(u"Vous êtes le héros")
+parser.add_argument('--root-dir', '-d', default=os.path.dirname(os.path.abspath(__file__)))
+args = parser.parse_args()
 
+ROOT_DIR = args.root_dir
 STEP_DIR = os.path.join(ROOT_DIR, 'steps')
 BUILD_DIR = os.path.join(ROOT_DIR, 'website')
 ASSET_SOURCE_DIR = os.path.join(ROOT_DIR, 'assets')
