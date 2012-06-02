@@ -10,7 +10,7 @@ class GenerateTestCase(unittest.TestCase):
     WEBSITE_DIR = os.path.join(TEST_DIR, 'website')
 
     def setUp(self):
-        call(["python", "../generator.py", "--root-dir=%s" % TEST_DIR, '-q'])
+        call(["python", "generator.py", "--root-dir=%s" % TEST_DIR, '-q'])
 
     def tearDown(self):
         shutil.rmtree(self.WEBSITE_DIR)
