@@ -12,7 +12,7 @@ from jinja2 import Environment, FileSystemLoader
 import yaml
 import markdown
 
-parser = argparse.ArgumentParser(u"Vous êtes le héros")
+parser = argparse.ArgumentParser("Vous êtes le héros")
 parser.add_argument('--root-dir', '-d', default=os.path.dirname(os.path.abspath(__file__)))
 parser.add_argument('--quiet', '-q', default=False, action='store_true')
 args = parser.parse_args()
