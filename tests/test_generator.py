@@ -22,5 +22,5 @@ class GenerateTestCase(unittest.TestCase):
         index_html = os.path.join(self.WEBSITE_DIR, 'index.html')
         self.assertTrue(os.path.exists(index_html))
         content = open(index_html).read()
-        self.assertTrue('<h1>This is my title</h1>' in content)
+        self.assertTrue('<h1>This is my -title</h1>' in content)
         self.assertTrue('<h2>This is a subtitle</h2>' in content)
