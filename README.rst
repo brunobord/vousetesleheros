@@ -3,7 +3,7 @@ Vous êtes le héros
 ==================
 
 .. image:: https://secure.travis-ci.org/brunobord/vousetesleheros.png
-
+    :target: http://travis-ci.org/#!/brunobord/vousetesleheros
 
 This is a "gamebook" generator. Python, Yaml, Jinja and bit of magic.
 
