@@ -2,6 +2,9 @@
 Vous êtes le héros
 ==================
 
+.. image:: https://secure.travis-ci.org/brunobord/vousetesleheros.png
+
+
 This is a "gamebook" generator. Python, Yaml, Jinja and bit of magic.
 
 For more on this, `dive into the documentation <http://vous-etes-le-heros.rtfd.org/>`_
