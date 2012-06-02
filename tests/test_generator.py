@@ -24,3 +24,12 @@ class GenerateTestCase(unittest.TestCase):
         content = open(index_html).read()
         self.assertTrue('<h1>This is my title</h1>' in content)
         self.assertTrue('<h2>This is a subtitle</h2>' in content)
+        self.assertTrue('I am <strong>so</strong> happy to see you there' in content)
+        self.assertTrue('Now I wanna go to this step / next_step' in content)
+        self.assertTrue("I'd rather go to this one / other_step" in content)
+
+    def test_assetdir(self):
+        asset_dir = os.path.join(self.WEBSITE_DIR, 'assets')
+        style_path = os.path.join(asset_dir, 'style.css')
+        self.assertTrue(os.path.exists(asset_dir))
+        self.assertTrue(os.path.exists(style_path))

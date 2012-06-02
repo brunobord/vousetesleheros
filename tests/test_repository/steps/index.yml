@@ -1,2 +1,10 @@
 title: This is my title
 subtitle: This is a subtitle
+intro: I am **so** happy to see you there
+choices:
+    -
+        text: Now I wanna go to this step
+        next: next_step
+    -
+        text: I'd rather go to this one
+        next: other_step
